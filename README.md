@@ -8,3 +8,5 @@ Tydzień II,17-23.10.2022
 Postępy:
 -Nauka obsługi programu STTouchGFX za pomocą tutoriala nr.3 ze strony https://support.touchgfx.com/4.14/docs/tutorials/tutorial-03, gdzie objaśnione jest jak tworzyć aplikacje posiadające dwa ekrany, oraz jak przekazywać dane pomiędzy ekranami.
 -Nauka obsługi programu STTouchGFX za pomocą tutoriala nr.4 ze strony https://support.touchgfx.com/4.14/docs/tutorials/tutorial-04, gdzie objaśnione zostało jak tworzyć aplikacje posiadające menu rodzaju tzw. Scroll Wheel with Custom Behavior.
+Tydzień II,24-31.10.2022
+-Nauka obsługi programu STTouchGFX za pomocą tutoriala nr.5 ze strony https://support.touchgfx.com/4.14/docs/tutorials/tutorial-05, gdzie objaśnione jest jak tworzyć Własne rodzaje akcji i wyzwalaczy(Custom Triggers and Actions).
