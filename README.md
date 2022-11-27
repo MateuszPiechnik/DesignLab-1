@@ -13,5 +13,5 @@ Tydzień III,24-31.10.2022 <br />
 Tydzień IV 31.10-06.11.2022 <br />
 -Dokładniejsze zapoznanie się z komponentami interfejsowymi z sekcji UI Components https://support.touchgfx.com/4.14/docs/development/ui-development/ui-components/buttons/button
 Tydzień V 20.11-27.11.2022 <br />
--Zapoznanie się z generatorem Analog Discovery 2, zainstalowanie oprogramowania WaveForms i wygenerowanie oraz zaobserwowanie na wbudowanym oscyloskopie wygenerowanych przebiegów.
+-Zapoznanie się z generatorem Analog Discovery 2, zainstalowanie oprogramowania WaveForms i wygenerowanie oraz zaobserwowanie na wbudowanym oscyloskopie wygenerowanych przebiegów. <br />
 -Testowanie płytki STM32F469 oraz wgranie na nią własnych programów i sprawdzenie ich działania poza symulacjami na platformie STM32GFXDesigner.
