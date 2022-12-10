@@ -38,6 +38,26 @@ public:
         // Override and implement this function in Screen2
     }
 
+    virtual void YdownButtonClicked()
+    {
+        // Override and implement this function in Screen2
+    }
+
+    virtual void YupButtonClicked()
+    {
+        // Override and implement this function in Screen2
+    }
+
+    virtual void XdownButtonClicked()
+    {
+        // Override and implement this function in Screen2
+    }
+
+    virtual void XupButtonClicked()
+    {
+        // Override and implement this function in Screen2
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -56,7 +76,7 @@ protected:
     touchgfx::Button YupButton;
     touchgfx::Button YdownButton;
     touchgfx::TextArea textArea2;
-    touchgfx::GraphScroll<100> Graph1;
+    touchgfx::GraphScroll<200> Graph1;
     touchgfx::GraphElementLine Graph1Line1;
     touchgfx::PainterRGB565 Graph1Line1Painter;
     touchgfx::GraphElementGridX Graph1MajorXAxisGrid;

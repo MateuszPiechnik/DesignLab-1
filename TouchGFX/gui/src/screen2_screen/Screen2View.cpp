@@ -4,6 +4,8 @@ Screen2View::Screen2View()
 {
     tickCounter = 0;
     lastindex = -1;
+    YRange = 100;
+    XRange = 195;
 }
 
 void Screen2View::setupScreen()
@@ -29,6 +31,77 @@ inline void Screen2View::Graph1dragged(AbstractDataGraph::GraphDragEvent value)
     lastindex = value.index;
     updateInfoWidgetPosition();
 }
+
+void Screen2View::XupButtonClicked()
+{
+    XRange += 5;
+    Graph1.setGraphRangeX(0,XRange);
+    if(XRange == 200){
+        Graph1MajorXAxisLabel.setInterval(20);
+        XRange=195;
+    }
+    if (XRange==50)
+    {
+        Graph1MajorXAxisLabel.setInterval(10);
+    }
+    if (XRange==20){
+        Graph1MajorXAxisLabel.setInterval(5);
+    }
+}
+
+void Screen2View::XdownButtonClicked()
+{   
+    XRange -=5;
+    Graph1.setGraphRangeX(0,XRange);
+    if(XRange == 190){
+        Graph1MajorXAxisLabel.setInterval(10);
+    }
+    if (XRange==50)
+    {
+        Graph1MajorXAxisLabel.setInterval(5);
+    }
+    if (XRange==10){
+        Graph1MajorXAxisLabel.setInterval(1);
+        XRange=15;
+    }
+    
+}
+
+void Screen2View::YupButtonClicked()
+{
+    YRange += 5;
+    Graph1.setGraphRangeY(0,YRange);
+    if(YRange == 200){
+        Graph1MajorYAxisLabel.setInterval(20);
+        YRange=195;
+    }
+    if (YRange==50)
+    {
+        Graph1MajorYAxisLabel.setInterval(10);
+    }
+    if (YRange==20){
+        Graph1MajorYAxisLabel.setInterval(5);
+    }
+}
+
+void Screen2View::YdownButtonClicked()
+{   
+    YRange -=5;
+    Graph1.setGraphRangeY(0,YRange);
+    if(YRange == 190){
+        Graph1MajorYAxisLabel.setInterval(10);
+    }
+    if (YRange==50)
+    {
+        Graph1MajorYAxisLabel.setInterval(5);
+    }
+    if (YRange==10){
+        Graph1MajorYAxisLabel.setInterval(1);
+        YRange=15;
+    }
+    
+}
+
 
 void Screen2View::handleTickEvent()
 {

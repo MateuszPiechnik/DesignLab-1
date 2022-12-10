@@ -435,10 +435,10 @@
             "Width": 800,
             "Height": 198,
             "DataSeed": 835899848,
-            "NumberOfValues": 100,
+            "NumberOfValues": 200,
             "MaxY": 100.0,
             "Precision": "1",
-            "LastIndex": 99,
+            "LastIndex": 199,
             "XAxisScale": 1.0,
             "InsertRandomValues": true,
             "LabelSizeBottom": 15,
@@ -551,6 +551,50 @@
               "ScreenTransitionType": "ScreenTransitionCover",
               "ScreenTransitionDirection": "North",
               "ActionComponent": "Screen1"
+            }
+          },
+          {
+            "InteractionName": "YdownButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "YdownButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YdownButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "YupButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "YupButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YupButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "XdownButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "XdownButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "XdownButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "XupButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "XupButtonClicked"
             }
           }
         ]

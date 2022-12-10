@@ -11,15 +11,19 @@ public:
     virtual ~Screen2View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-
     virtual void Graph1Clicked(AbstractDataGraph::GraphClickEvent value);
-
     virtual void Graph1dragged(AbstractDataGraph::GraphDragEvent value);
+     virtual void XupButtonClicked();
+    virtual void YupButtonClicked();
+    virtual void YdownButtonClicked();
+    virtual void XdownButtonClicked();
     void handleTickEvent();
 protected:
     void updateInfoWidgetPosition();
     int tickCounter;
     int lastindex;
+    int YRange{};
+    int XRange{};
 };
 
 #endif // SCREEN2VIEW_HPP
