@@ -1,5 +1,6 @@
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <math.h>
+#include <stdlib.h>
 Screen2View::Screen2View()
 {
     tickCounter = 0;
@@ -106,9 +107,14 @@ void Screen2View::YdownButtonClicked()
 void Screen2View::handleTickEvent()
 {
     tickCounter++;
-    if (tickCounter % 3 == 0) {
-        Graph1.addDataPoint((sinf(tickCounter * 0.07f) + 1) * 40 + rand() % 10);
-        updateInfoWidgetPosition();
+
+    // Insert each second tick
+    if (tickCounter % 3 == 0)
+    {
+        float yMax = Graph1.getGraphRangeYMaxAsFloat();
+
+        // Insert "random" points along a sine wave
+        Graph1.addDataPoint((int)((sinf(tickCounter * .02f) + 1) * (yMax / 2.2f)) + rand() % (int)(yMax / 10.f));
     }
 }
 
