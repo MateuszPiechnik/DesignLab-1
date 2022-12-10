@@ -125,3 +125,7 @@ void Screen1View::updateInfoWidgetPosition()
     }
 }
 
+void Screen1View::ResetButtonClicked()
+{
+    Graph2.clear();
+}

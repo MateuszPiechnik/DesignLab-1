@@ -17,6 +17,7 @@ public:
     virtual void YupButtonClicked();
     virtual void YdownButtonClicked();
     virtual void XdownButtonClicked();
+    virtual void ResetButtonClicked();
     void handleTickEvent();
 protected:
     void updateInfoWidgetPosition();

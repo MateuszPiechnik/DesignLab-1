@@ -297,6 +297,17 @@
               "Type": "ActionCustom",
               "FunctionName": "YdownButtonClicked"
             }
+          },
+          {
+            "InteractionName": "ResetButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "StopButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ResetButtonClicked"
+            }
           }
         ]
       },

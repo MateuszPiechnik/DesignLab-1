@@ -34,6 +34,7 @@ Screen1ViewBase::Screen1ViewBase() :
     StopButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y84I));
     StopButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     StopButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    StopButton.setAction(buttonCallback);
 
     XdownButton.setXY(335, 300);
     XdownButton.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON_DOWN_RELEASED_ID), touchgfx::Bitmap(BITMAP_BUTTON_DOWN_PRESSED_ID));
@@ -330,6 +331,13 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When Channel2_button clicked change screen to Screen2
         //Go to Screen2 with screen transition towards South
         application().gotoScreen2ScreenCoverTransitionSouth();
+    }
+    else if (&src == &StopButton)
+    {
+        //ResetButtonClicked
+        //When StopButton clicked call virtual function
+        //Call ResetButtonClicked
+        ResetButtonClicked();
     }
     else if (&src == &XdownButton)
     {
