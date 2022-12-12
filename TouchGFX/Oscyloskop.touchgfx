@@ -37,7 +37,7 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "StopButton",
+            "Name": "ResetButton",
             "X": 28,
             "Y": 258,
             "Width": 170,
@@ -302,7 +302,7 @@
             "InteractionName": "ResetButtonClicked",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "StopButton"
+              "TriggerComponent": "ResetButton"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -347,7 +347,7 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "StopButton",
+            "Name": "ResetButton",
             "X": 28,
             "Y": 258,
             "Width": 170,
@@ -598,7 +598,7 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "XupButtonClicked",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "XupButton"
@@ -606,6 +606,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "XupButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "ResetButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ResetButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ResetButtonClicked"
             }
           }
         ]

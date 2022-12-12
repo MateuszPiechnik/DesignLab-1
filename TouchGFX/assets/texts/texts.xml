@@ -31,7 +31,7 @@
         <Translation Language="GB">X Axis:</Translation>
       </Text>
       <Text Id="__SingleUse_92H2" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Stop</Translation>
+        <Translation Language="GB">Reset</Translation>
       </Text>
       <Text Id="__SingleUse_YN6H" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Channel 1</Translation>

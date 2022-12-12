@@ -43,7 +43,7 @@ TouchGFX/build/STM32F469-DISCO/TouchGFX/target/STM32TouchController.o: \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
  Drivers/BSP/STM32469I-Discovery/../Components/ft6x06/ft6x06.h \
- c:\touchgfxprojects\oscyloskop\drivers\bsp\components\common\ts.h
+ Drivers/BSP/STM32469I-Discovery/../Components/ft6x06/../Common/ts.h
 
 TouchGFX/target/STM32TouchController.hpp:
 
@@ -135,4 +135,4 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
 
 Drivers/BSP/STM32469I-Discovery/../Components/ft6x06/ft6x06.h:
 
-c:\touchgfxprojects\oscyloskop\drivers\bsp\components\common\ts.h:
+Drivers/BSP/STM32469I-Discovery/../Components/ft6x06/../Common/ts.h:

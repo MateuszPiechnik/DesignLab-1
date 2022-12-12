@@ -12,11 +12,22 @@ Screen2View::Screen2View()
 void Screen2View::setupScreen()
 {
     Screen2ViewBase::setupScreen();
+
+    XRange = presenter -> getXRange();
+    YRange = presenter -> getYRange();
+    Graph1.setGraphRangeY(0, YRange);
+    Graph1.setGraphRangeX(0, XRange);
 }
 
 void Screen2View::tearDownScreen()
 {
+
+    presenter -> saveXRange(XRange);
+    presenter -> saveYRange(YRange);
+
     Screen2ViewBase::tearDownScreen();
+
+   
 }
 
 inline void Screen2View::Graph1Clicked(AbstractDataGraph::GraphClickEvent value)
@@ -101,6 +112,10 @@ void Screen2View::YdownButtonClicked()
         YRange=15;
     }
     
+}
+
+void Screen2View::ResetButtonClicked(){
+    Graph1.clear();
 }
 
 

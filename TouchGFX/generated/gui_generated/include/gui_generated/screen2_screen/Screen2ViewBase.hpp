@@ -58,6 +58,11 @@ public:
         // Override and implement this function in Screen2
     }
 
+    virtual void ResetButtonClicked()
+    {
+        // Override and implement this function in Screen2
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -69,7 +74,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image image1;
     touchgfx::ButtonWithLabel Channel1_button;
-    touchgfx::ButtonWithLabel StopButton;
+    touchgfx::ButtonWithLabel ResetButton;
     touchgfx::TextArea textArea1;
     touchgfx::Button XupButton;
     touchgfx::Button XdownButton;

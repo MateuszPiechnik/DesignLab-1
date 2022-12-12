@@ -29,11 +29,12 @@ Screen2ViewBase::Screen2ViewBase() :
     Channel1_button.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Channel1_button.setAction(buttonCallback);
 
-    StopButton.setXY(28, 258);
-    StopButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    StopButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_92H2));
-    StopButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    StopButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ResetButton.setXY(28, 258);
+    ResetButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    ResetButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_92H2));
+    ResetButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ResetButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ResetButton.setAction(buttonCallback);
 
     textArea1.setXY(244, 258);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -306,7 +307,7 @@ Screen2ViewBase::Screen2ViewBase() :
     add(__background);
     add(image1);
     add(Channel1_button);
-    add(StopButton);
+    add(ResetButton);
     add(textArea1);
     add(XupButton);
     add(XdownButton);
@@ -331,9 +332,16 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Go to Screen1 with screen transition towards North
         application().gotoScreen1ScreenCoverTransitionNorth();
     }
+    else if (&src == &ResetButton)
+    {
+        //ResetButtonClicked
+        //When ResetButton clicked call virtual function
+        //Call ResetButtonClicked
+        ResetButtonClicked();
+    }
     else if (&src == &XupButton)
     {
-        //Interaction1
+        //XupButtonClicked
         //When XupButton clicked call virtual function
         //Call XupButtonClicked
         XupButtonClicked();

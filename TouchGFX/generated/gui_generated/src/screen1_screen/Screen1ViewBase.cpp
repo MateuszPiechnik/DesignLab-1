@@ -29,12 +29,12 @@ Screen1ViewBase::Screen1ViewBase() :
     Channel2_button.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Channel2_button.setAction(buttonCallback);
 
-    StopButton.setXY(28, 258);
-    StopButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    StopButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y84I));
-    StopButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    StopButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    StopButton.setAction(buttonCallback);
+    ResetButton.setXY(28, 258);
+    ResetButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    ResetButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y84I));
+    ResetButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ResetButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ResetButton.setAction(buttonCallback);
 
     XdownButton.setXY(335, 300);
     XdownButton.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON_DOWN_RELEASED_ID), touchgfx::Bitmap(BITMAP_BUTTON_DOWN_PRESSED_ID));
@@ -307,7 +307,7 @@ Screen1ViewBase::Screen1ViewBase() :
     add(__background);
     add(image1);
     add(Channel2_button);
-    add(StopButton);
+    add(ResetButton);
     add(XdownButton);
     add(XupButton);
     add(textArea1);
@@ -332,10 +332,10 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Go to Screen2 with screen transition towards South
         application().gotoScreen2ScreenCoverTransitionSouth();
     }
-    else if (&src == &StopButton)
+    else if (&src == &ResetButton)
     {
         //ResetButtonClicked
-        //When StopButton clicked call virtual function
+        //When ResetButton clicked call virtual function
         //Call ResetButtonClicked
         ResetButtonClicked();
     }

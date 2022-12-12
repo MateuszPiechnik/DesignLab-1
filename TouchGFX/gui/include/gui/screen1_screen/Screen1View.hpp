@@ -18,13 +18,18 @@ public:
     virtual void YdownButtonClicked();
     virtual void XdownButtonClicked();
     virtual void ResetButtonClicked();
+    
     void handleTickEvent();
+
+    
 protected:
     void updateInfoWidgetPosition();
     int tickCounter{};
     int lastindex{};
     int YRange{};
     int XRange{};
+    
+    
 };
 
 #endif // SCREEN1VIEW_HPP

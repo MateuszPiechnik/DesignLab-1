@@ -27,6 +27,25 @@ public:
 
     virtual ~Screen2Presenter() {};
 
+    void saveXRange(int XRange)
+    {
+        model -> saveXRange(XRange);
+    }
+
+    void saveYRange(int YRange)
+    {
+        model -> saveYRange(YRange);
+    }
+
+    int getXRange()
+    {
+        return model -> getXRange();
+    }
+     int getYRange()
+    {
+        return model -> getYRange();
+    }
+
 private:
     Screen2Presenter();
 

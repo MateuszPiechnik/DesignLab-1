@@ -74,7 +74,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image image1;
     touchgfx::ButtonWithLabel Channel2_button;
-    touchgfx::ButtonWithLabel StopButton;
+    touchgfx::ButtonWithLabel ResetButton;
     touchgfx::Button XdownButton;
     touchgfx::Button XupButton;
     touchgfx::TextArea textArea1;

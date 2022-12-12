@@ -5,13 +5,17 @@ Screen1View::Screen1View()
 {
     tickCounter = 0;
     lastindex = -1;
-    YRange = 100;
-    XRange = 195;
+    
+    
 }
 
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
+    XRange = presenter -> getXRange();
+    YRange = presenter -> getYRange();
+    Graph2.setGraphRangeY(0, YRange);
+    Graph2.setGraphRangeX(0, XRange);
 }
 
 void Screen1View::tearDownScreen()
@@ -45,6 +49,7 @@ void Screen1View::handleTickEvent()
 
 void Screen1View::XupButtonClicked()
 {
+    presenter -> saveXRange(XRange);
     XRange += 5;
     Graph2.setGraphRangeX(0,XRange);
     if(XRange == 200){
@@ -62,6 +67,7 @@ void Screen1View::XupButtonClicked()
 
 void Screen1View::XdownButtonClicked()
 {   
+    presenter -> saveXRange(XRange);
     XRange -=5;
     Graph2.setGraphRangeX(0,XRange);
     if(XRange == 190){
@@ -80,8 +86,9 @@ void Screen1View::XdownButtonClicked()
 
 void Screen1View::YupButtonClicked()
 {   
+    presenter -> saveYRange(YRange);
     YRange +=5;
-    Graph2.setGraphRangeY(0,YRange);
+    Graph2.setGraphRangeY(0, YRange);
     if(YRange == 200){
         Graph2MajorYAxisLabel.setInterval(20);
         YRange=195;
@@ -96,6 +103,7 @@ void Screen1View::YupButtonClicked()
 }
 void Screen1View::YdownButtonClicked()
 {   
+    presenter -> saveYRange(YRange);
     YRange -=5;
     Graph2.setGraphRangeY(0,YRange);
     if(YRange == 190){
@@ -128,4 +136,5 @@ void Screen1View::updateInfoWidgetPosition()
 void Screen1View::ResetButtonClicked()
 {
     Graph2.clear();
+    lastindex = -1;
 }
